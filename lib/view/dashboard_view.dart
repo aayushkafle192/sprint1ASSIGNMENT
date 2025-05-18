@@ -6,84 +6,103 @@ class DashboardView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.grey[100], // softer background
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 24.0),
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              // Logo Circle with denim & devilish colors
               Container(
-                width: 80,
-                height: 80,
+                width: 90,
+                height: 90,
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  color: Colors.green,
+                  color: Colors.blueGrey[900], // dark denim-ish background
                 ),
                 child: Stack(
                   alignment: Alignment.center,
                   children: [
                     Positioned(
-                      left: 10,
-                      child: CircleAvatar(
-                        radius: 18,
-                        backgroundColor: Colors.greenAccent,
-                      ),
-                    ),
-                    Positioned(
-                      right: 10,
-                      child: CircleAvatar(
-                        radius: 18,
-                        backgroundColor: Colors.teal,
-                      ),
-                    ),
-                    Positioned(
-                      top: 0,
+                      left: 12,
                       child: CircleAvatar(
                         radius: 20,
-                        backgroundColor: Colors.green[700],
+                        backgroundColor: Colors.indigo[700], // denim blue
+                      ),
+                    ),
+                    Positioned(
+                      right: 12,
+                      child: CircleAvatar(
+                        radius: 20,
+                        backgroundColor: Colors.red[700], // devil red accent
+                      ),
+                    ),
+                    Positioned(
+                      top: 5,
+                      child: CircleAvatar(
+                        radius: 22,
+                        backgroundColor: Colors.black87,
+                        child: Icon(
+                          Icons
+                              .local_fire_department, // fire icon for devil theme
+                          color: Colors.red[400],
+                          size: 30,
+                        ),
                       ),
                     ),
                   ],
                 ),
               ),
-              SizedBox(height: 32),
+
+              SizedBox(height: 36),
 
               Text(
-                'Yatra',
+                'Denim & Devils',
                 style: TextStyle(
-                  fontSize: 28,
+                  fontSize: 32,
                   fontWeight: FontWeight.bold,
-                  color: Colors.black,
+                  color: Colors.blueGrey[900],
+                  letterSpacing: 1.2,
                 ),
               ),
 
-              SizedBox(height: 8),
+              SizedBox(height: 10),
 
               Text(
-                'Embark on your journey with Yatra\ntoday!',
+                'Wear your attitude.\nStay bold with Denim & Devils.',
                 textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 16, color: Colors.black87),
+                style: TextStyle(
+                  fontSize: 18,
+                  color: Colors.blueGrey[700],
+                  fontWeight: FontWeight.w500,
+                ),
               ),
 
-              SizedBox(height: 40),
+              SizedBox(height: 44),
 
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
                   onPressed: () {
-                    //NAvigation handle:
+                    // Navigation handle
                   },
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Color(0xFF00723F),
-                    padding: EdgeInsets.symmetric(vertical: 14),
+                    backgroundColor: Colors.red[700],
+                    padding: EdgeInsets.symmetric(vertical: 16),
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(19),
+                      borderRadius: BorderRadius.circular(22),
                     ),
+                    elevation: 5,
+                    shadowColor: Colors.redAccent,
                   ),
                   child: Text(
-                    'Start Your Journey',
-                    style: TextStyle(fontSize: 19, color: Colors.white),
+                    'Explore Collection',
+                    style: TextStyle(
+                      fontSize: 20,
+                      color: Colors.white,
+                      fontWeight: FontWeight.w600,
+                    ),
                   ),
                 ),
               ),
