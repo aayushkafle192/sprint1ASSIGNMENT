@@ -1,5 +1,5 @@
 class SplashModel {
   Future<void> initApp() async {
-    await Future.delayed(Duration(seconds: 2));
+    await Future.delayed(Duration(seconds: 3));
   }
 }
